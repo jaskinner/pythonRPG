@@ -2,7 +2,8 @@ import random
 
 
 class Character:
-    def __init__(self, hit_points, attack_bonus, armor):
+    def __init__(self, name, hit_points, attack_bonus, armor):
+        self.name = name
         self.hp = hit_points
         self.attack_bonus = attack_bonus
         self.armor = armor
@@ -21,6 +22,6 @@ class Character:
 
 
 class Monster(Character):
-    def __init__(self, hit_points, attack_bonus, armor, kind):
-        Character.__init__(self, hit_points, attack_bonus, armor)
+    def __init__(self, name, hit_points, attack_bonus, armor, kind):
+        Character.__init__(self, name, hit_points, attack_bonus, armor)
         self.kind = kind
